@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ayush ❤️ For You</title>
+<title>Ayush ❤️ Kajal</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -41,69 +41,83 @@ position:fixed;bottom:20px;display:flex;gap:15px
 <body>
 <div class="container">
 
+<!-- Page 1 -->
 <div class="page active" id="page1">
-<h1>Hey ❤️</h1>
-<p>Ek chhoti si baat bolni hai… Dil se 🥺</p>
+<h1>Hey Kajal ❤️</h1>
+<p>Ek chhoti si baat bolni hai… bilkul dil se 🥺</p>
 </div>
 
+<!-- Page 2 -->
 <div class="page" id="page2">
-<h2>Tumhare Baare Me</h2>
+<h2>Meri Kajal 💖</h2>
 <p>
-Tum meri zindagi ka sabse beautiful hissa ho.  
-Tumhari smile mere bure din bhi ache bana deti hai.  
-Sach me… tum ho isliye sab theek lagta hai.
+Kajal, tum meri zindagi ka sabse beautiful hissa ho.  
+Tumhari smile mere sabse bure din bhi theek kar deti hai.  
+Sach me… tum ho isliye sab kuch sahi lagta hai.
 </p>
 </div>
 
+<!-- Page 3 -->
 <div class="page" id="page3">
 <h2>Hamari Yaadein 💫</h2>
-<p>Jab pehli baar mile the – dil thoda fast beat kar raha tha 😌</p>
-<p>Late night baatein – time ka pata hi nahi chalta</p>
-<p>Har moment tumhare saath – special ban jata hai</p>
+<p>Jab pehli baar tumse mila tha – dil thoda sa ghabra gaya tha 😌</p>
+<p>Late night baatein – tumhari awaaz sun kar time ruk jata hai</p>
+<p>Kajal, har moment tumhare saath apne aap special ho jata hai</p>
 </div>
 
+<!-- Page 4 -->
 <div class="page" id="page4">
 <h2>Main Tumse Pyaar Kyun Karta Hoon ❤️</h2>
 <p>✔️ Tumhari simplicity</p>
-<p>✔️ Tumhari care</p>
-<p>✔️ Tumhari cute si smile</p>
-<p>✔️ Tum mujhe better insan banati ho</p>
+<p>✔️ Tumhari care jo bina bole samajh jaati hai</p>
+<p>✔️ Tumhari cute si smile jo sab kuch theek kar deti hai</p>
+<p>✔️ Kajal, tum mujhe har din better insan banati ho</p>
 </div>
 
+<!-- Page 5 -->
 <div class="page" id="page5">
-<h2>Aaj Ka Din</h2>
+<h2>Aaj Ka Din 💍</h2>
 <p>
 Aaj main Ayush, dil se ek baat kehna chahta hoon.  
-Yeh sirf words nahi hain, yeh mera maan hai.
+Kajal, yeh sirf words nahi hain… yeh mera poora dil hai.
 </p>
 </div>
 
+<!-- Page 6 -->
 <div class="page" id="page6">
 <h2>Mere Dil Ki Baat 💖</h2>
 <p>
-Main chahta hoon ki har subah tumhare saath shuru ho,  
-har problem milke solve karein,  
-aur har khushi saath manayein.
+Main chahta hoon har subah tumhare saath shuru ho, Kajal.  
+Har problem hum dono milke face karein,  
+aur har khushi… sirf tumhare saath manayein.
 </p>
 </div>
 
+<!-- Page 7 -->
 <div class="page" id="page7">
-<h2>Tum Mere Liye Kya Ho</h2>
+<h2>Kajal, Tum Mere Liye ❤️</h2>
 <p>
 Tum meri best friend ho,  
-meri safe place ho,  
-aur meri future ho 💍
+meri sabse safe jagah ho,  
+aur meri poori future ho 💍
 </p>
 </div>
 
+<!-- Page 8 -->
 <div class="page" id="page8">
-<h2>💍 Will You Marry Me? 💍</h2>
-<p>Main Ayush, poori zindagi tumhare saath bitana chahta hoon ❤️</p>
+<h2>💍 Will You Marry Me, Kajal? 💍</h2>
+<p>
+Main Ayush, apni poori zindagi tumhare saath bitana chahta hoon ❤️  
+Kya tum meri zindagi humesha ke liye banogi?
+</p>
+
 <button class="yes" onclick="yes()">YES 🥺❤️</button>
 <button class="no" onclick="no(this)">No 😢</button>
+
 <div id="msg"></div>
 </div>
 
+<!-- Navigation -->
 <div class="nav">
 <button onclick="prev()">⬅</button>
 <button onclick="next()">➡</button>
@@ -113,17 +127,21 @@ aur meri future ho 💍
 
 <script>
 let p=1,total=8;
-function show(){document.querySelectorAll('.page').forEach(d=>d.classList.remove('active'));
-document.getElementById('page'+p).classList.add('active')}
+function show(){
+document.querySelectorAll('.page').forEach(d=>d.classList.remove('active'));
+document.getElementById('page'+p).classList.add('active')
+}
 function next(){if(p<total){p++;show()}}
 function prev(){if(p>1){p--;show()}}
 function yes(){
-document.getElementById('msg').innerHTML="<div class='success'>She said YES ❤️🎉</div>";
+document.getElementById('msg').innerHTML=
+"<div class='success'>Kajal said YES ❤️🎉<br>Ayush is the happiest person alive 😭💖</div>";
 }
 function no(btn){
 btn.style.left=Math.random()*200+"px";
 btn.style.top=Math.random()*200+"px";
 }
 </script>
+
 </body>
 </html>
