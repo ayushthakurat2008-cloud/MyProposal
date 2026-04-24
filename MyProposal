@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayush ❤️ For You</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;overflow:hidden}
+.container{width:100%;height:100vh;display:flex;align-items:center;justify-content:center}
+.page{display:none;width:100%;height:100%;position:absolute;top:0;left:0}
+.page.active{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px}
+h1,h2{margin-bottom:20px}
+p{font-size:1.2em;line-height:1.6}
+
+#page1{background:linear-gradient(135deg,#667eea,#764ba2);color:white}
+#page2{background:linear-gradient(135deg,#f093fb,#f5576c);color:white}
+#page3{background:linear-gradient(135deg,#fa709a,#fee140)}
+#page4{background:linear-gradient(135deg,#ff6b6b,#ee5a6f);color:white}
+#page5{background:linear-gradient(135deg,#4facfe,#00f2fe)}
+#page6{background:linear-gradient(135deg,#f093fb,#f5576c);color:white}
+#page7{background:linear-gradient(135deg,#11998e,#38ef7d);color:white}
+#page8{background:linear-gradient(135deg,#ee7752,#e73c7e);color:white}
+
+button{
+padding:15px 35px;font-size:1.1em;border:none;border-radius:50px;
+cursor:pointer;margin:10px;font-weight:bold
+}
+.yes{background:#4CAF50;color:white}
+.no{background:#f44336;color:white;position:relative}
+
+.nav{
+position:fixed;bottom:20px;display:flex;gap:15px
+}
+.nav button{background:white;color:#333}
+.success{font-size:2em;margin-top:20px}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<div class="page active" id="page1">
+<h1>Hey ❤️</h1>
+<p>Ek chhoti si baat bolni hai… Dil se 🥺</p>
+</div>
+
+<div class="page" id="page2">
+<h2>Tumhare Baare Me</h2>
+<p>
+Tum meri zindagi ka sabse beautiful hissa ho.  
+Tumhari smile mere bure din bhi ache bana deti hai.  
+Sach me… tum ho isliye sab theek lagta hai.
+</p>
+</div>
+
+<div class="page" id="page3">
+<h2>Hamari Yaadein 💫</h2>
+<p>Jab pehli baar mile the – dil thoda fast beat kar raha tha 😌</p>
+<p>Late night baatein – time ka pata hi nahi chalta</p>
+<p>Har moment tumhare saath – special ban jata hai</p>
+</div>
+
+<div class="page" id="page4">
+<h2>Main Tumse Pyaar Kyun Karta Hoon ❤️</h2>
+<p>✔️ Tumhari simplicity</p>
+<p>✔️ Tumhari care</p>
+<p>✔️ Tumhari cute si smile</p>
+<p>✔️ Tum mujhe better insan banati ho</p>
+</div>
+
+<div class="page" id="page5">
+<h2>Aaj Ka Din</h2>
+<p>
+Aaj main Ayush, dil se ek baat kehna chahta hoon.  
+Yeh sirf words nahi hain, yeh mera maan hai.
+</p>
+</div>
+
+<div class="page" id="page6">
+<h2>Mere Dil Ki Baat 💖</h2>
+<p>
+Main chahta hoon ki har subah tumhare saath shuru ho,  
+har problem milke solve karein,  
+aur har khushi saath manayein.
+</p>
+</div>
+
+<div class="page" id="page7">
+<h2>Tum Mere Liye Kya Ho</h2>
+<p>
+Tum meri best friend ho,  
+meri safe place ho,  
+aur meri future ho 💍
+</p>
+</div>
+
+<div class="page" id="page8">
+<h2>💍 Will You Marry Me? 💍</h2>
+<p>Main Ayush, poori zindagi tumhare saath bitana chahta hoon ❤️</p>
+<button class="yes" onclick="yes()">YES 🥺❤️</button>
+<button class="no" onclick="no(this)">No 😢</button>
+<div id="msg"></div>
+</div>
+
+<div class="nav">
+<button onclick="prev()">⬅</button>
+<button onclick="next()">➡</button>
+</div>
+
+</div>
+
+<script>
+let p=1,total=8;
+function show(){document.querySelectorAll('.page').forEach(d=>d.classList.remove('active'));
+document.getElementById('page'+p).classList.add('active')}
+function next(){if(p<total){p++;show()}}
+function prev(){if(p>1){p--;show()}}
+function yes(){
+document.getElementById('msg').innerHTML="<div class='success'>She said YES ❤️🎉</div>";
+}
+function no(btn){
+btn.style.left=Math.random()*200+"px";
+btn.style.top=Math.random()*200+"px";
+}
+</script>
+</body>
+</html>
